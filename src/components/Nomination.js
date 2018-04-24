@@ -42,31 +42,43 @@ class Nomination extends React.Component {
           </div>
 
           {this.state.isLoggedIn ? (
-            <div className="nomination__upload-form">
-
+            <div className="nomination__form nomination__form--upload">
               <div className="form-field">
                 <label className="form-field__label">Name of project</label>
-                <input className="form-field__text-input" type="text" />
+                <input className="form-field__text-input" type="text" defaultValue="Project Name" />
               </div>
               <div className="form-field">
                 <label className="form-field__label">What is it</label>
-                <input className="form-field__text-input" type="text" />
+                <input className="form-field__text-input" type="text" defaultValue="A design project" />
               </div>
               <div className="form-field">
                 <label className="form-field__label">Who made it</label>
-                <input className="form-field__text-input" type="text" />
+                <input className="form-field__text-input" type="text" defaultValue="An agency" />
               </div>
               <div className="form-field">
                 <label className="form-field__label">Disciplines</label>
-                <input className="form-field__text-input" type="text" />
+                <input className="form-field__text-input" type="text" defaultValue="Digital, Editorial, Print" />
               </div>
-
+              <div className="nomination__upload-form-files">
+                <h2 className="nomination__upload-form-title">Uploaded files</h2>
+                {[...Array(3)].map((x, i) =>
+                  <div className="nomination__upload-form-file" key={i}>
+                    <div className="nomination__upload-form-file-inner">
+                      <div className="case-study__block-item-media">
+                        <img src="https://placeimg.com/640/480/any" alt="" />
+                      </div>
+                      <div className="form-field">
+                        <label className="form-field__label">Caption</label>
+                        <input className="form-field__textarea-input" type="textarea" defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor" />
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
               <Link to='/profile'>Submit</Link>
-
             </div>
           ) : (
-            <div className="nomination__signup-form">
-
+            <div className="nomination__form nomination__form--signup">
               <div className="form-field">
                 <label className="form-field__label">My name is</label>
                 <input className="form-field__text-input" type="text" />
@@ -83,7 +95,6 @@ class Nomination extends React.Component {
                 <label className="form-field__label">My email is</label>
                 <input className="form-field__text-input" type="text" />
               </div>
-
               <button className="cta cta--primary" onClick={this.handleLogin}>Go</button>
             </div>
           )}

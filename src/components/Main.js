@@ -4,6 +4,7 @@ import Home from './Home'
 import CaseStudy from './CaseStudy';
 import Profile from './Profile';
 import Nomination from './Nomination';
+import EditorialProfile from './EditorialProfile';
 
 // The Main component renders one of the three provided
 // Routes (provided that one matches). Both the /roster
@@ -17,6 +18,7 @@ const Main = () => (
       <Route exact path='/case-study' component={CaseStudy}/>
       <Route exact path='/profile' component={Profile}/>
       <Route exact path='/nomination' component={Nomination}/>
+      <Route exact path='/editorial-profile' component={EditorialProfile}/>
     </Switch>
   </main>
 )
