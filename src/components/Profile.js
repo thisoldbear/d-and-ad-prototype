@@ -1,11 +1,22 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoggedIn: window.location.search.substring(1) || false,
+      isLoggedIn: false,
     };
+  }
+
+  handleLogin = () => {
+    if (!this.state.isLoggedIn) {
+      window.localStorage.setItem('isLoggedIn', 'true');
+    }
+
+    this.setState({
+      isLoggedIn: window.localStorage.getItem('isLoggedIn') === 'true' ? true : false
+    });
   }
 
   render() {
@@ -49,7 +60,7 @@ class Profile extends React.Component {
                     </div>
                   )
                 ) : (
-                  <p className="profile__creations-message">Please sign up or login to see creations</p>
+                  <p className="profile__creations-message">Please sign up or <button onClick={this.handleLogin}>login</button> to see creations</p>
                 )}
 
               </div>
