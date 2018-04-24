@@ -38,7 +38,8 @@ const Home = () => (
                   <h3 className="project-card__title-text">Redesigning the Bristol library</h3>
                 </div>
                 <div className="project-card__rating">
-                  <p className="project-card__rating-count">7</p>
+                  <span className="project-card__rating-icon">&uarr;</span>
+                  <span className="project-card__rating-count">7</span>
                 </div>
               </div>
             </div>
