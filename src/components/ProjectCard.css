@@ -1,0 +1,29 @@
+.project-card {
+  text-align: left;
+  background-color: #fff;
+}
+
+.project-card__desc {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.project-card__icon {
+  width: 35px;
+  margin-right: 15px;
+}
+
+.project-card__title {
+  width: calc(100% - 60px);
+  padding-right: 20px;
+}
+
+.project-card__title-text {
+  font-size: 18px;
+}
+
+.project-card__rating {
+  width: 60px;
+  height: 25px;
+}

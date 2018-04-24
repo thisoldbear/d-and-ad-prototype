@@ -3,5 +3,11 @@
  */
 
 .app {
-  background: peachpuff;
+  background: #fff;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
 }
