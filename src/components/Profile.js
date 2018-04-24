@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -16,6 +15,12 @@ class Profile extends React.Component {
 
     this.setState({
       isLoggedIn: window.localStorage.getItem('isLoggedIn') === 'true' ? true : false
+    });
+  }
+
+  componentWillMount() {
+    this.setState({
+      isLoggedIn: window.localStorage.getItem('isLoggedIn') && window.localStorage.getItem('isLoggedIn') === 'true' ? true : false
     });
   }
 
