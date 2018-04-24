@@ -4,6 +4,9 @@ import Header from './Header';
 import Main from './Main';
 
 import './App.css';
+import './ProjectCard.css';
+import './Boxout.css';
+import './Cta.css';
 
 class App extends Component {
   render() {

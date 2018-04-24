@@ -1,0 +1,29 @@
+.boxout {
+  background-color: #fff;
+  text-align: center;
+}
+
+.boxout p {
+  font-size: 18px;
+}
+
+.boxout p a {
+  text-decoration: underline;
+}
+
+.boxout__inner {
+  padding: 40px 35px;
+}
+
+.boxout__title {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.boxout__sub-title {
+  margin-bottom: 30px;
+}
+
+.boxout .cta + p {
+  margin-top: 10px;
+}

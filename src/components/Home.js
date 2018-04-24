@@ -1,7 +1,6 @@
 import React from 'react'
 
 import './Home.css';
-import './ProjectCard.css';
 
 const Home = () => (
   <div className="home">
@@ -47,6 +46,14 @@ const Home = () => (
         )}
 
       </div>
+    </div>
+    <div className="boxout">
+        <div className="boxout__inner">
+          <h2 className="boxout__title">All showcased work is peer nominated</h2>
+          <p className="boxout__sub-title">To know more about the members and nominate work, you need to be a member.</p>
+          <button className="cta cta--primary">Sign up</button>
+          <p>or <a>log in</a></p>
+        </div>
     </div>
   </div>
 )
