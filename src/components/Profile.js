@@ -39,7 +39,7 @@ class Profile extends React.Component {
                 </div>
                 <p className="profile__hero-avatar-name">Daniel Williams</p>
                 <p className="profile__hero-avatar-location">Bristol, UK</p>
-                <Link to='/editorial-profile'>Profile</Link>
+                <Link to='/editorial-profile'>Editorial Profile</Link>
               </div>
             ) : (
               <div className="profile__hero-avatar">
